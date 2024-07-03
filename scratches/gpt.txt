@@ -1,0 +1,26 @@
+gpt_response = ChatCompletion(
+    id='chatcmpl-9fV7JYyX1rVkKC56VruO3wg2Bwb5O',
+    choices=[
+        Choice(
+            finish_reason='stop',
+            index=0,
+            logprobs=None,
+            message=ChatCompletionMessage(
+                content="Hey Liam! Let's dive right in. When did you first start coding and what languages are you most comfortable with?",
+                role='assistant',
+                function_call=None,
+                tool_calls=None
+            )
+        )
+    ],
+    created=1719678089,
+    model='gpt-3.5-turbo-0125',
+    object='chat.completion',
+    service_tier=None,
+    system_fingerprint=None,
+    usage=CompletionUsage(
+        completion_tokens=24,
+        prompt_tokens=64,
+        total_tokens=88
+    )
+)

@@ -20,6 +20,10 @@ class BaseConfig:
     SECRET_KEY = os.getenv("SECRET_KEY") or "abcdefg132456"
     ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
     DATABASE_URL = os.getenv("DATABASE_DEV")
+    OPENAI_KEY = os.getenv("OPENAI_KEY")
+    OPENAI_ORG = os.getenv("OPENAI_ORG")
+    ELEVENLABS_KEY = os.getenv("ELEVENLABS_KEY")
+    STARTING_CONTEXT = os.getenv("STARTING_CONTEXT")
 
 
 class DevelopmentConfig(BaseConfig):

@@ -1,9 +1,9 @@
 from sqlalchemy.orm import sessionmaker
 
-from main.database import engine
-from main.models import User
-from main.utils.jwt import create_access_token
-from main.utils.password import gen_salt, generate_password_hash
+from app.database import engine
+from app.models import User
+from app.utils.jwt import create_access_token
+from app.utils.password import gen_salt, generate_password_hash
 
 Session = sessionmaker(bind=engine)
 session = Session()

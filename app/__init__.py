@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from main.controllers import auth, chat, users
-from main.database import Base, engine
+from app.controllers import auth, chat, users
+from app.database import Base, engine
 
 
 def create_app() -> FastAPI:
@@ -17,6 +17,3 @@ def create_app() -> FastAPI:
     Base.metadata.create_all(engine)
 
     return app
-
-
-app = create_app()

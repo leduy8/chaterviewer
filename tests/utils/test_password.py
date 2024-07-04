@@ -1,4 +1,4 @@
-from main.utils.password import check_password_hash, gen_salt, generate_password_hash
+from app.utils.password import check_password_hash, gen_salt, generate_password_hash
 
 
 def test_gen_salt():

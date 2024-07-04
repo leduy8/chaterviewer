@@ -5,7 +5,7 @@ import pytz
 from sqlalchemy import Column
 from sqlalchemy.types import DateTime, Integer, String
 
-from main.database import Base
+from app.database import Base
 
 
 class SimpleBaseModel(Base):

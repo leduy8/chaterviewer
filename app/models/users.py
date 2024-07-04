@@ -1,7 +1,7 @@
 from sqlalchemy import Column
 from sqlalchemy.types import String
 
-from main.models.base import BaseModel
+from app.models.base import BaseModel
 
 
 class User(BaseModel):

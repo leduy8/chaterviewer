@@ -1,7 +1,7 @@
 from fastapi import APIRouter, UploadFile
 from fastapi.responses import StreamingResponse
 
-from main.services.chat import get_chat_response, text_to_speech, transcribe_audio
+from app.services.chat import get_chat_response, text_to_speech, transcribe_audio
 
 router = APIRouter(prefix="/chat", tags=["chat"])
 

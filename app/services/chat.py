@@ -4,7 +4,7 @@ import os
 import requests
 from openai import OpenAI, RateLimitError
 
-from main.config import config
+from app.config import config
 
 client = OpenAI(api_key=config.OPENAI_KEY, organization=config.OPENAI_ORG)
 

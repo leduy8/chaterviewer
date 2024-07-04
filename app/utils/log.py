@@ -2,7 +2,7 @@ import json
 import logging
 import sys
 
-from main.config import config
+from app.config import config
 
 
 class ServiceLogger:

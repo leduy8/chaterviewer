@@ -1,8 +1,8 @@
 import pytest
 from fastapi.testclient import TestClient
 
-from main import create_app
-from main.database import Base, engine
+from app import create_app
+from app.database import Base, engine
 from tests.dummy_data import create_dummy_access_token, create_dummy_invalid_access_token, create_dummy_user
 
 

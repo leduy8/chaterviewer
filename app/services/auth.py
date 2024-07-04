@@ -1,11 +1,11 @@
 from fastapi import HTTPException, status
 from sqlalchemy.orm.session import Session
 
-from main.models.users import User
-from main.schemas.auth import LoginRequest, SignUpRequest
-from main.services import users as user_service
-from main.utils.jwt import create_access_token
-from main.utils.password import check_password_hash
+from app.models.users import User
+from app.schemas.auth import LoginRequest, SignUpRequest
+from app.services import users as user_service
+from app.utils.jwt import create_access_token
+from app.utils.password import check_password_hash
 
 
 def signup(db: Session, data: SignUpRequest):

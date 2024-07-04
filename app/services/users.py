@@ -1,10 +1,10 @@
 from fastapi import HTTPException, status
 from sqlalchemy.orm.session import Session
 
-from main.models.users import User
-from main.schemas.auth import SignUpRequest
-from main.schemas.users import UserRequest
-from main.utils.password import gen_salt, generate_password_hash
+from app.models.users import User
+from app.schemas.auth import SignUpRequest
+from app.schemas.users import UserRequest
+from app.utils.password import gen_salt, generate_password_hash
 
 
 def find_user_by_uuid(db: Session, uuid: str):

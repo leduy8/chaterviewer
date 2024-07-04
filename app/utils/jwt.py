@@ -2,8 +2,8 @@ from typing import Dict
 
 import jwt
 
-from main.config import config
-from main.exceptions import InvalidAuthorizationError, MissingAuthorizationError
+from app.config import config
+from app.exceptions import InvalidAuthorizationError, MissingAuthorizationError
 
 
 def create_access_token(payload: Dict, key=config.SECRET_KEY) -> str:

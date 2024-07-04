@@ -1,4 +1,4 @@
-from main.utils.jwt import create_access_token
+from app.utils.jwt import create_access_token
 from tests.dummy_data import create_dummy_text
 
 

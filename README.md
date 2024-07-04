@@ -17,7 +17,7 @@ source venv/bin/activate
 ### Install dependencies
 
 ```shell
-pip install -r common.txt
+pip install -r requirements/common.txt
 ```
 
 ### Install `pre-commit` hooks

@@ -1,7 +1,7 @@
 import jwt
 import pytest
 
-from main.utils.jwt import create_access_token, get_jwt_payload
+from app.utils.jwt import create_access_token, get_jwt_payload
 
 
 @pytest.mark.parametrize("payload", [{"id": 1}, {"id": 2, "name": "Duy", "age": 23}])

@@ -3,10 +3,10 @@ from fastapi import Depends, HTTPException, Request, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy.orm.session import Session
 
-from main.database import get_db
-from main.exceptions import InvalidAuthorizationError, MissingAuthorizationError
-from main.services.users import find_user_by_uuid
-from main.utils.jwt import get_jwt_payload, get_jwt_token
+from app.database import get_db
+from app.exceptions import InvalidAuthorizationError, MissingAuthorizationError
+from app.services.users import find_user_by_uuid
+from app.utils.jwt import get_jwt_payload, get_jwt_token
 
 
 async def authenticate_user(

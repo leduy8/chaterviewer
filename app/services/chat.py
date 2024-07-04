@@ -7,15 +7,16 @@ from openai import OpenAI, RateLimitError
 from app.config import config
 
 client = OpenAI(api_key=config.OPENAI_KEY, organization=config.OPENAI_ORG)
+assets_path = "app/assets/"
 
 
 def transcribe_audio(file):
     try:
         # Save the blob first
-        with open(file.filename, "wb") as buffer:
+        with open(assets_path + file.filename, "wb") as buffer:
             buffer.write(file.file.read())
 
-        # audio_file= open(file.filename, "rb")
+        # audio_file= open(assets_path + file.filename, "rb")
         # transcription = client.audio.transcriptions.create(
         #   model="whisper-1",
         #   file=audio_file
@@ -49,7 +50,7 @@ def get_chat_response(user_message):
 
 def load_messages():
     messages = []
-    file = "database.json"
+    file = assets_path + "database.json"
 
     # if file is empty, we add system context (system role)
     # if file is not empty, loop histo ry and load context to messages
@@ -67,7 +68,7 @@ def load_messages():
 
 
 def save_messages(user_message, gpt_response):
-    file = "database.json"
+    file = assets_path + "database.json"
     messages = load_messages()
     messages.append({"role": "user", "content": user_message})
     messages.append({"role": "assistant", "content": gpt_response})
@@ -89,7 +90,7 @@ def text_to_speech(text):
 
         response = requests.post(url, json=data, headers=headers)
         if response.status_code == 200:
-            with open("output.mp3", "wb") as f:
+            with open(assets_path + "output.mp3", "wb") as f:
                 for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
                     if chunk:
                         f.write(chunk)
